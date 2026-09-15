@@ -26,19 +26,21 @@ var CONFIG={
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;padding:22px 14px 32px;color:var(--tinta);font:15px/1.4 ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--fundo);background-image:radial-gradient(120% 55% at 50% -8%,#E7EFE6 0%,rgba(231,239,230,0) 62%);background-attachment:fixed}
 .wrap{max-width:520px;margin:0 auto}.serif{font-family:'Cormorant Garamond',Georgia,serif}.num{font-variant-numeric:tabular-nums}.caps{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--suave)}
-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:42px;padding:48px 4px 0}h1{margin:0;font-size:30px;font-weight:500;line-height:1}h1 i{font-weight:400;color:var(--sage)}
-.teto{background:#fff;border-radius:13px;box-shadow:var(--sombra);padding:10px 14px 11px;text-align:right;transform:none}.teto .caps{display:block}.teto .campo{display:flex;align-items:baseline;gap:3px}.teto em{font-style:normal;font-size:11px;color:var(--suave)}.teto input{width:70px;border:0;background:none;text-align:right;font-size:17px;font-weight:600;padding:0}
+header{display:block;margin-bottom:18px;padding:18px 4px 0}h1{margin:0;font-size:34px;font-weight:500;line-height:1.05}h1 i{font-weight:400;color:var(--sage)}
+.teto{background:#fff;border-radius:18px;box-shadow:0 10px 24px rgba(44,58,51,.08);padding:14px 16px 13px;text-align:right;min-width:190px}.teto .caps{display:block}.teto .campo{display:flex;align-items:baseline;gap:3px}.teto em{font-style:normal;font-size:11px;color:var(--suave)}.teto input{width:70px;border:0;background:none;text-align:right;font-size:17px;font-weight:600;padding:0}
 .mes{display:flex;align-items:center;gap:8px;background:#fff;border-radius:13px;box-shadow:var(--sombra);padding:8px 10px 8px 13px;margin-bottom:12px}.mes select{flex:1;min-width:0;border:0;background:none;font-size:15px;font-weight:600;text-transform:capitalize}.mes button{border:0;background:var(--sage-claro);color:var(--sage);border-radius:8px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:8px 10px;cursor:pointer}
-.sync{display:block;text-align:center;margin:-4px 0 12px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#B6BAB2}.sync.on{color:var(--sage)}.sync.erro{color:var(--vinho)}
+.sync{display:block;text-align:center;margin:4px 0 20px;padding-left:0;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#B6BAB2}.sync.on{color:var(--sage)}.sync.erro{color:var(--vinho)}
 .setor,.hist{background:#fff;border-radius:16px;box-shadow:var(--sombra);padding:14px;margin-bottom:12px}.setor-cab{display:flex;align-items:center;gap:8px;margin-bottom:4px}.setor-cab .caps{color:var(--sage)}.setor-total{white-space:nowrap;background:var(--sage-claro);color:var(--sage);border-radius:8px;padding:5px 8px;font-size:11px;font-weight:700}.pt{width:5px;height:5px;border-radius:50%;background:var(--sage)}.setor-cab hr{flex:1;border:0;border-top:1px solid var(--fio)}button{font:inherit}.setor-cab button,.x,.hl button{border:0;background:none;color:#C8CCC5;cursor:pointer}.x{min-width:32px;min-height:32px;display:grid;place-items:center;position:relative;z-index:999;pointer-events:auto;cursor:pointer;font-size:18px;line-height:1}
 .it{display:grid;grid-template-columns:20px minmax(0,1fr) auto auto 18px;align-items:center;gap:7px;padding:9px 0;border-bottom:1px solid var(--fio)}.ck{width:20px;height:20px;border:1.5px solid #DAD9D1;border-radius:50%;background:none;color:transparent;display:grid;place-items:center;cursor:pointer}.it.ok .ck{background:var(--sage);border-color:var(--sage);color:#fff}.nm{border:0;background:none;font-size:15.5px;font-weight:500;width:100%}.it.ok .nm{color:#AAB0A8;text-decoration:line-through}
 .q{display:flex;align-items:center;background:var(--campo);border-radius:9px}.q button{width:23px;height:28px;border:0;background:none;color:var(--suave)}.q input{width:24px;height:28px;border:0;background:none;text-align:center;font-weight:600}
 .p{display:flex;align-items:center;gap:2px;background:var(--campo);border-radius:9px;height:28px;padding:0 8px}.p em{font-style:normal;font-size:9.5px;font-weight:700;color:var(--suave)}.p input{width:48px;border:0;background:none;text-align:right;font-weight:600}
 .add{display:flex;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--fio)}.add span{color:var(--sage);font-size:16px}.add input{flex:1;border:0;background:none;font-size:14px}
-.hist .caps{display:block;margin-bottom:6px;color:var(--sage)}.hm{border-bottom:1px solid var(--fio)}.hl{display:flex;align-items:center;gap:8px;padding:9px 0;cursor:pointer}.seta{color:#C8CCC5;font-size:10px;width:12px;transition:.2s}.hm.aberto .seta{transform:rotate(90deg)}.hl b{flex:1;font-weight:500;text-transform:capitalize}.hm.atual .hl b{color:var(--sage);font-weight:700}.hl span{font-weight:600;color:var(--suave)}.det{display:none;padding:2px 0 12px 20px}.hm.aberto .det{display:block}.gp{font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sage);margin:9px 0 3px}.li{display:flex;gap:8px;padding:2.5px 0;font-size:13px;color:var(--suave)}.li i{flex:1;font-style:normal;color:var(--tinta)}.abrir{margin-top:11px;border:0;background:var(--sage-claro);color:var(--sage);border-radius:8px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:8px 12px}
+.hist .caps{display:block;margin-bottom:6px;color:var(--sage)}.hm{border-bottom:1px solid var(--fio)}.hl{display:flex;align-items:center;gap:8px;padding:9px 0;cursor:pointer}.seta{color:#C8CCC5;font-size:10px;width:12px;transition:.2s}.hm.aberto .seta{transform:rotate(90deg)}.hl b{flex:1;font-weight:500;text-transform:capitalize}.hm.atual .hl b{color:var(--sage);font-weight:700}.hl span{font-weight:600;color:var(--suave)}
+.hist-x{border:0;background:transparent;color:#C7CBC4;width:34px;height:34px;border-radius:8px;display:grid;place-items:center;cursor:pointer;font-size:18px;line-height:1;margin-left:4px;position:relative;z-index:50;pointer-events:auto}
+.hist-x:hover{background:#F5ECEA;color:var(--vinho)}.det{display:none;padding:2px 0 12px 20px}.hm.aberto .det{display:block}.gp{font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sage);margin:9px 0 3px}.li{display:flex;gap:8px;padding:2.5px 0;font-size:13px;color:var(--suave)}.li i{flex:1;font-style:normal;color:var(--tinta)}.abrir{margin-top:11px;border:0;background:var(--sage-claro);color:var(--sage);border-radius:8px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:8px 12px}
 .acoes{display:flex;gap:8px;padding:0 2px}.acoes button{flex:1;border:0;background:#fff;box-shadow:var(--sombra);border-radius:10px;padding:10px 8px;color:var(--suave);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
 .bar{margin:12px 0;pointer-events:none}.pill{max-width:520px;margin:0 auto;pointer-events:auto;background:#fff;border-radius:18px;box-shadow:var(--sombra);padding:11px 16px 13px}.in{display:flex;align-items:flex-end;justify-content:space-between}.tt{font-size:29px;font-weight:600}.sd{text-align:right}.sd b{display:block}.med{height:4px;border-radius:4px;background:#EEF0EB;margin-top:10px;overflow:hidden}.med i{display:block;height:100%;background:var(--sage)}.bar.over .tt,.bar.over .sd b{color:var(--vinho)}.bar.over .med i{background:var(--vinho)}
-.side{position:fixed;left:calc(50% + 278px);top:22px;width:190px;max-height:calc(100vh - 44px);overflow:auto;background:#fff;border-radius:16px;box-shadow:var(--sombra);padding:12px;z-index:20}
+.side{position:fixed;left:calc(50% + 278px);top:150px;width:190px;max-height:calc(100vh - 180px);overflow:auto;background:#fff;border-radius:16px;box-shadow:var(--sombra);padding:12px;z-index:20}
 .side .caps{display:block;margin-bottom:8px;color:var(--sage)}
 .side-nav{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
 .side-nav button{border:0;background:none;text-align:left;padding:7px 8px;border-radius:8px;color:var(--tinta);font-size:12px;cursor:pointer}
@@ -48,13 +50,80 @@ header{display:flex;align-items:flex-start;justify-content:space-between;gap:14p
 .side-actions button:hover{background:var(--sage-claro);color:var(--sage)}
 .anchor{scroll-margin-top:18px}
 @media(max-width:940px){.side{position:sticky;left:auto;top:8px;width:auto;max-height:none;overflow:visible;margin:0 0 12px;z-index:20}.side-nav{flex-direction:row;overflow:auto;padding-bottom:2px}.side-nav button{white-space:nowrap}.side-actions{grid-template-columns:1fr}}
+
+
+.month-tools{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 12px;max-width:820px}
+.month-mini{border:1px solid rgba(110,139,107,.14);background:#fff;color:var(--tinta);border-radius:16px;min-height:46px;padding:0 14px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;box-shadow:0 10px 24px rgba(44,58,51,.08);cursor:pointer;display:flex;align-items:center;gap:8px}
+#btn-ver-mes{min-width:230px;justify-content:space-between}
+#btn-novo-mes{justify-content:center;padding-inline:16px}
+.month-budget-card,.month-total-card{display:flex;align-items:center;gap:8px;min-height:46px;padding:0 14px;background:#fff;border:1px solid rgba(110,139,107,.14);border-radius:16px;box-shadow:0 10px 24px rgba(44,58,51,.08);white-space:nowrap}
+.month-budget-card .caps,
+.month-budget-value{display:flex;align-items:baseline;gap:3px}
+.month-budget-value em{font-style:normal;font-size:10px;color:var(--suave)}
+.month-budget-value input{width:64px;border:0;background:transparent;text-align:right;font-size:14px;font-weight:700;color:var(--tinta);padding:0}
+
+.month-total-card strong{font-size:14px;color:var(--tinta)}
+.month-mini.month-add{background:var(--sage-claro);color:var(--sage);border-color:transparent}
+.month-mini:hover{transform:translateY(-1px)}
+.month-pop{position:absolute;left:0;top:54px;width:260px;background:#fff;border:1px solid var(--fio);border-radius:16px;box-shadow:0 16px 38px rgba(44,58,51,.14);padding:12px;z-index:100}
+.month-pop[hidden]{display:none}
+.month-list{display:grid;gap:6px;margin-top:8px}
+.month-list button{border:0;background:var(--campo);border-radius:10px;text-align:left;padding:10px 11px;color:var(--tinta);cursor:pointer;font-size:12px}
+.month-list button.ativo{background:var(--sage-claro);color:var(--sage);font-weight:700}
+.month-new-pop{display:grid;gap:9px}
+.month-new-pop input[type="month"]{width:100%;border:1px solid var(--fio);background:var(--campo);border-radius:10px;padding:10px;font:inherit;color:var(--tinta)}
+.month-copy{display:flex;gap:7px;align-items:flex-start;font-size:11px;color:var(--suave)}
+.month-new-pop>button{border:0;background:var(--sage);color:white;border-radius:10px;padding:10px 11px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;cursor:pointer}
+.sync{display:block;text-align:left;margin:2px 0 18px;padding-left:6px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#B6BAB2}
+@media(max-width:760px){
+  header{grid-template-columns:1fr;gap:14px;margin-bottom:12px;padding-top:12px}
+  .teto{min-width:0;max-width:210px}
+  .month-tools{flex-wrap:wrap;margin:0 0 10px}
+  #btn-ver-mes{min-width:0;flex:1}
+  #btn-novo-mes{min-width:110px}.month-budget-card,.month-total-card{flex:0 0 auto}
+  .month-pop{left:0;right:auto;width:min(280px,calc(100vw - 28px))}
+}
+
+  .month-pop{right:0;left:auto;width:min(260px,calc(100vw - 28px))}
+  .month-delete-row{flex-direction:column}
+}
+
 input:focus,select:focus{outline:none}@media(max-width:430px){.it{grid-template-columns:20px minmax(0,1fr) auto 18px}.q{grid-row:2;grid-column:2}.p{grid-row:2;grid-column:3}.x{grid-row:1/3;grid-column:4}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><h1 class="serif">Lista de <i>mercado</i></h1><div class="teto"><span class="caps">Teto</span><span class="campo"><em>R$</em><input id="teto" inputmode="decimal" placeholder="0,00"></span></div></header>
+<header><h1 class="serif">Lista de <i>mercado</i></h1></header>
 
+<div class="month-tools">
+  <button id="btn-ver-mes" type="button" class="month-mini">
+    <span id="mes-atual-label" style="letter-spacing:.03em;text-transform:none;font-size:13px">Mês atual</span><span aria-hidden="true">⌄</span>
+  </button>
+  <button id="btn-novo-mes" type="button" class="month-mini month-add">+ Mês</button>
+  <div class="month-budget-card" aria-label="Teto do mês">
+    <span class="caps">Teto</span>
+    <span class="month-budget-value"><em>R$</em><input id="teto" inputmode="decimal" placeholder="0,00"></span>
+  </div>
+  <div class="month-total-card" aria-label="Total do mês">
+    <span class="caps">Total</span>
+    <strong id="total-topo" class="num">R$ 0,00</strong>
+  </div>
+
+  <div id="painel-meses" class="month-pop" hidden>
+    <span class="caps">Visualizar mês</span>
+    <div id="lista-meses" class="month-list"></div>
+  </div>
+
+  <div id="painel-novo-mes" class="month-pop month-new-pop" hidden>
+    <span class="caps">Adicionar novo mês</span>
+    <input id="novo-mes-input" type="month">
+    <label class="month-copy">
+      <input id="copiar-mes-check" type="checkbox" checked>
+      <span>Copiar setores e itens do mês atual</span>
+    </label>
+    <button id="confirmar-novo-mes" type="button">Criar mês</button>
+  </div>
+</div>
 <span class="sync" id="sync">só neste aparelho</span>
 <aside class="side" id="side">
   <span class="caps">Sumário</span>
@@ -71,9 +140,7 @@ input:focus,select:focus{outline:none}@media(max-width:430px){.it{grid-template-
   </div>
 </aside>
 <div id="lista"></div>
-<div class="bar" id="bar"><div class="pill"><div class="in"><div><div class="caps">Total</div><div class="tt serif num" id="total">R$ 0,00</div></div><div class="sd"><span class="caps" id="rot">Teto</span><b id="saldo">não definido</b></div></div><div class="med"><i id="fill"></i></div></div></div>
 <div class="hist anchor" id="hist"></div>
-
 </div>
 <script>
 (function(){
@@ -163,7 +230,9 @@ function carregar(){
  }catch(e){}
  // Agosto/2026 vem embutido como histórico-base. Nunca sobrescreve uma
  // versão já existente no navegador, que pode conter mais itens/dados.
- est.meses["2026-08"]=JSON.parse(JSON.stringify(AGOSTO_2026_FIXO));
+ if(!Object.prototype.hasOwnProperty.call(est.meses,"2026-08")){
+   est.meses["2026-08"]=JSON.parse(JSON.stringify(AGOSTO_2026_FIXO));
+ }
  normaliza();
 }
 function salvar(k=est.atual){if(est.meses[k])est.meses[k]._ts=Date.now();guarda();if(ref&&est.meses[k])ref.child(k).set(est.meses[k]).catch(()=>status("sem conexão","erro"))}
@@ -171,7 +240,7 @@ function num(t){if(!t)return 0;var s=String(t).replace(/[^\d,.-]/g,"");if(s.incl
 function brl(v){return"R$ "+v.toFixed(2).replace(".",",").replace(/\B(?=(\d{3})+(?!\d))/g,".")}
 function totalMes(k){var t=0,m=est.meses[k];if(!m||m.del)return 0;(m.s||[]).forEach(s=>(s.itens||[]).forEach(i=>t+=(+i.qtd||0)*(+i.preco||0)));return t}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
-var L=document.getElementById("lista"),sel=document.getElementById("sel-mes");
+var L=document.getElementById("lista");
 
 function linha(s,i,si,ii){
  var r=el("div","it"+(i.ok?" ok":""));
@@ -251,19 +320,201 @@ function render(){L.textContent="";M().s.forEach((s,idx)=>{var sec=el("section",
  xs.title="Excluir setor";
  xs.setAttribute("onclick","window.excluirSetorDireto("+idx+"); return false;");
  cab.appendChild(xs);sec.appendChild(cab);s.itens.forEach((i,ii)=>sec.appendChild(linha(s,i,idx,ii)));var a=el("div","add");a.appendChild(el("span",null,"+"));var c=document.createElement("input");c.placeholder="adicionar item";function add(){var v=c.value.trim();if(v){s.itens.push({id:id(),nome:v,qtd:1,preco:0,ok:false});salvar();render()}}c.onkeydown=e=>{if(e.key==="Enter")add()};c.onblur=()=>{if(c.value.trim())add()};a.appendChild(c);sec.appendChild(a);L.appendChild(sec)});montaSumario();montaHist();totais()}
+function sugestaoProximoMes(){
+ var base=(est.atual && /^\d{4}-\d{2}$/.test(est.atual))?est.atual:chaveMes();
+ var p=base.split("-");
+ return chaveMes(new Date(+p[0],(+p[1]-1)+1,1));
+}
+function fechaPaineisMes(){
+ var p1=document.getElementById("painel-meses");
+ var p2=document.getElementById("painel-novo-mes");
+ if(p1)p1.hidden=true;
+ if(p2)p2.hidden=true;
+}
+function abrirMes(k){
+ if(!vivo(k))return;
+ est.atual=k;
+ guarda();
+ montaMeses();
+ render();
+ fechaPaineisMes();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
 function montaMeses(){
- if(sel){
-   sel.textContent="";
-   visiveis().reverse().forEach(k=>{
-     var o=document.createElement("option");
-     o.value=k;o.textContent=nomeMes(k);o.selected=k===est.atual;sel.appendChild(o)
+ var label=document.getElementById("mes-atual-label");
+ if(label)label.textContent=nomeMes(est.atual);
+
+ var lista=document.getElementById("lista-meses");
+ if(lista){
+   lista.innerHTML="";
+   visiveis().slice().sort().reverse().forEach(function(k){
+     var b=document.createElement("button");
+     b.type="button";
+     b.textContent=nomeMes(k);
+     if(k===est.atual)b.className="ativo";
+     b.addEventListener("click",function(){abrirMes(k);});
+     lista.appendChild(b);
    });
  }
- document.getElementById("teto").value=M().teto?M().teto.toFixed(2).replace(".",","):"";
+
+
+ var tetoEl=document.getElementById("teto");
+ if(tetoEl)tetoEl.value=M().teto?M().teto.toFixed(2).replace(".",","):"";
 }
-if(sel) sel.onchange=()=>{est.atual=sel.value;guarda();montaMeses();render()};
-function montaHist(){var h=document.getElementById("hist");h.textContent="";h.appendChild(el("span","caps","Histórico · toque para ver os itens"));visiveis().reverse().forEach(k=>{var box=el("div","hm"+(k===est.atual?" atual":"")),l=el("div","hl");l.append(el("span","seta","▶"),el("b",null,nomeMes(k)),el("span","num",brl(totalMes(k))));var x=el("button",null,"✕");x.onclick=e=>{e.stopPropagation();if(visiveis().length<2)return alert("Mantenha pelo menos um mês.");if(confirm("Excluir "+nomeMes(k)+"?")){est.meses[k]={del:true,_ts:Date.now()};normaliza();salvar(k);montaMeses();render()}};l.appendChild(x);var det=el("div","det"),m=est.meses[k];(m.s||[]).forEach(s=>{if(!(s.itens||[]).length)return;det.appendChild(el("div","gp",s.nome));s.itens.forEach(i=>{var li=el("div","li"),v=(+i.qtd||0)*(+i.preco||0);li.append(el("i",null,i.nome),el("span",null,(i.qtd||0)+"un"),el("b",null,v?brl(v):"—"));det.appendChild(li)})});if(k!==est.atual){var ab=el("button","abrir","Abrir esta lista");ab.onclick=e=>{e.stopPropagation();est.atual=k;guarda();montaMeses();render();scrollTo(0,0)};det.appendChild(ab)}l.onclick=()=>box.classList.toggle("aberto");box.append(l,det);h.appendChild(box)})}
-function totais(){var t=totalMes(est.atual),te=M().teto||0;document.getElementById("total").textContent=brl(t);var S=document.getElementById("saldo"),R=document.getElementById("rot"),B=document.getElementById("bar"),F=document.getElementById("fill");if(te>0){var r=te-t;R.textContent=r>=0?"Disponível":"Acima do teto";S.textContent=brl(Math.abs(r));B.className="bar"+(r<0?" over":"");F.style.width=Math.min(100,t/te*100)+"%"}else{R.textContent="Teto";S.textContent="não definido";B.className="bar";F.style.width="0"}}
+
+var btnVerMes=document.getElementById("btn-ver-mes");
+var btnNovoMes=document.getElementById("btn-novo-mes");
+var painelMeses=document.getElementById("painel-meses");
+var painelNovo=document.getElementById("painel-novo-mes");
+var inputNovoMes=document.getElementById("novo-mes-input");
+var checkCopiarMes=document.getElementById("copiar-mes-check");
+var btnConfirmarNovoMes=document.getElementById("confirmar-novo-mes");
+
+btnVerMes.addEventListener("click",function(e){
+ e.stopPropagation();
+ var vaiAbrir=painelMeses.hidden;
+ fechaPaineisMes();
+ painelMeses.hidden=!vaiAbrir;
+});
+btnNovoMes.addEventListener("click",function(e){
+ e.stopPropagation();
+ var vaiAbrir=painelNovo.hidden;
+ fechaPaineisMes();
+ painelNovo.hidden=!vaiAbrir;
+ if(vaiAbrir){
+   inputNovoMes.value=sugestaoProximoMes();
+   setTimeout(function(){inputNovoMes.focus();},0);
+ }
+});
+painelMeses.addEventListener("click",function(e){e.stopPropagation();});
+painelNovo.addEventListener("click",function(e){e.stopPropagation();});
+document.addEventListener("click",fechaPaineisMes);
+
+btnConfirmarNovoMes.addEventListener("click",function(){
+ var k=(inputNovoMes.value||"").trim();
+ if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(k)){
+   alert("Escolha um mês válido.");
+   return;
+ }
+ if(vivo(k)){
+   abrirMes(k);
+   return;
+ }
+
+ var novo;
+ if(checkCopiarMes.checked){
+   novo=M().s.map(function(s){
+     return {
+       id:id(),
+       nome:s.nome,
+       itens:(s.itens||[]).map(function(i){
+         return {id:id(),nome:i.nome,qtd:i.qtd||1,preco:0,ok:false};
+       })
+     };
+   });
+ }else{
+   novo=padrao();
+ }
+ est.meses[k]={teto:M().teto||0,s:novo,_ts:Date.now()};
+ est.atual=k;
+ salvar(k);
+ guarda();
+ montaMeses();
+ render();
+ fechaPaineisMes();
+ window.scrollTo({top:0,behavior:"smooth"});
+});
+
+window.excluirMesDireto=function(k){
+ if(!k || !vivo(k)) return false;
+ if(visiveis().length<=1){
+   alert("É preciso manter pelo menos um mês.");
+   return false;
+ }
+
+ est.meses[k]={del:true,_ts:Date.now()};
+
+ if(est.atual===k){
+   var restantes=Object.keys(est.meses)
+     .filter(function(x){return x!==k && est.meses[x] && !est.meses[x].del;})
+     .sort();
+   est.atual=restantes[restantes.length-1];
+ }
+
+ guarda();
+
+ if(ref){
+   ref.child(k).set(est.meses[k]).catch(function(){
+     status("sem conexão","erro");
+   });
+ }
+
+ normaliza();
+ montaMeses();
+ render();
+ return false;
+};
+function montaHist(){
+ var h=document.getElementById("hist");
+ h.textContent="";
+ h.appendChild(el("span","caps","Histórico · toque para ver os itens"));
+
+ visiveis().reverse().forEach(function(k){
+   var box=el("div","hm"+(k===est.atual?" atual":""));
+   var l=el("div","hl");
+
+   var seta=el("span","seta","▶");
+   var nome=el("b",null,nomeMes(k));
+   var valor=el("span","num",brl(totalMes(k)));
+   var x=el("button","hist-x","✕");
+   x.type="button";
+   x.title="Excluir "+nomeMes(k);
+   x.setAttribute("aria-label","Excluir "+nomeMes(k));
+   x.setAttribute("onclick","event.preventDefault();event.stopPropagation();window.excluirMesDireto('"+k+"');return false;");
+
+   l.append(seta,nome,valor,x);
+
+   var det=el("div","det");
+   var m=est.meses[k];
+
+   (m.s||[]).forEach(function(s){
+     if(!(s.itens||[]).length)return;
+     det.appendChild(el("div","gp",s.nome));
+     s.itens.forEach(function(i){
+       var li=el("div","li");
+       var v=(+i.qtd||0)*(+i.preco||0);
+       li.append(
+         el("i",null,i.nome),
+         el("span",null,(i.qtd||0)+"un"),
+         el("b",null,v?brl(v):"—")
+       );
+       det.appendChild(li);
+     });
+   });
+
+   if(k!==est.atual){
+     var ab=el("button","abrir","Abrir esta lista");
+     ab.onclick=function(e){
+       e.stopPropagation();
+       est.atual=k;
+       guarda();
+       montaMeses();
+       render();
+       scrollTo(0,0);
+     };
+     det.appendChild(ab);
+   }
+
+   l.onclick=function(){box.classList.toggle("aberto")};
+   box.append(l,det);
+   h.appendChild(box);
+ });
+}
+function totais(){
+  var t=totalMes(est.atual);
+  var tt=document.getElementById("total-topo");
+  if(tt) tt.textContent=brl(t);
+}
 var teto=document.getElementById("teto");teto.oninput=()=>{M().teto=num(teto.value);salvar();totais()};teto.onblur=()=>teto.value=M().teto?M().teto.toFixed(2).replace(".",","):"";
 var btnSetor=document.getElementById("side-setor");
 var boxSetor=document.getElementById("novo-setor-box");
