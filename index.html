@@ -444,11 +444,14 @@ window.excluirMesDireto=function(k){
 
  guarda();
 
- if(ref){
-   ref.child(k).set(est.meses[k]).catch(function(){
+ fetch("/api/dados?mes="+encodeURIComponent(k),{method:"DELETE"})
+   .then(function(r){
+     if(!r.ok) return r.text().then(function(t){throw new Error(t)});
+     status("sincronizado","on");
+   })
+   .catch(function(){
      status("sem conexão","erro");
    });
- }
 
  normaliza();
  montaMeses();
