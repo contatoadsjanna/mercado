@@ -206,7 +206,53 @@ function nomeMes(k){var p=k.split("-");return new Date(+p[0],+p[1]-1,1).toLocale
 var est={meses:{},atual:chaveMes()}; est.meses[est.atual]={teto:0,s:padrao(),_ts:Date.now()};
 function vivo(k){return !!(k&&est.meses[k]&&!est.meses[k].del)}
 function visiveis(){return Object.keys(est.meses).filter(vivo).sort()}
-function normaliza(){if(!est.meses)est.meses={};Object.keys(est.meses).forEach(k=>{var m=est.meses[k]||{};if(m.del)return;m.s=m.s||[];m.s.forEach(s=>s.itens=s.itens||[]);m.teto=+m.teto||0});if(!vivo(est.atual))est.atual=visiveis().pop()||chaveMes();if(!vivo(est.atual))est.meses[est.atual]={teto:0,s:padrao(),_ts:Date.now()}}
+function normaliza(){
+ if(!est || typeof est!=="object") est={meses:{},atual:chaveMes()};
+ if(!est.meses || typeof est.meses!=="object" || Array.isArray(est.meses)) est.meses={};
+
+ Object.keys(est.meses).forEach(function(k){
+  var m=est.meses[k];
+
+  if(!m || typeof m!=="object" || Array.isArray(m)){
+   est.meses[k]={teto:0,s:padrao(),_ts:Date.now()};
+   m=est.meses[k];
+  }
+
+  if(m.del)return;
+  if(!Array.isArray(m.s))m.s=[];
+
+  m.s=m.s.filter(function(s){
+   return s && typeof s==="object" && !Array.isArray(s);
+  });
+
+  m.s.forEach(function(s){
+   if(!s.id)s.id=id();
+   if(typeof s.nome!=="string")s.nome="";
+   if(!Array.isArray(s.itens))s.itens=[];
+
+   s.itens=s.itens.filter(function(i){
+    return i && typeof i==="object" && !Array.isArray(i);
+   });
+
+   s.itens.forEach(function(i){
+    if(!i.id)i.id=id();
+    if(typeof i.nome!=="string")i.nome="";
+    i.qtd=Math.max(0,+i.qtd||0);
+    i.preco=Math.max(0,+i.preco||0);
+    i.ok=!!i.ok;
+   });
+  });
+
+  m.teto=Math.max(0,+m.teto||0);
+  m._ts=+m._ts||0;
+ });
+
+ if(typeof est.atual!=="string" || !vivo(est.atual))
+  est.atual=visiveis().pop()||chaveMes();
+
+ if(!vivo(est.atual))
+  est.meses[est.atual]={teto:0,s:padrao(),_ts:Date.now()};
+}
 function M(){return est.meses[est.atual]}
 function guarda(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(est))}catch(e){}}
 function carregar(){
